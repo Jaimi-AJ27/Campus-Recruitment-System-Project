@@ -4,7 +4,7 @@ require_once("connect.php");
 if(isset($_POST)) {
          
 	$uid = mysqli_real_escape_string($conn, $_POST['userid']);
-
+	
 	$sql = "UPDATE user_reg SET Status=0 WHERE user_id='$uid'";
 	if($conn->query($sql) === TRUE) 
 {

@@ -387,7 +387,7 @@ include 'connect.php';
 
 ?>						
               <?php
-                $sql = "SELECT * FROM user_reg";
+                $sql = "SELECT * FROM applied_jobs inner join job_post on job_post.job_id=applied_jobs.job_id where job_post.reg_id='$regid' ";
                 $result = $conn->query($sql);
                 if($result->num_rows > 0) {
                   $i = 0;

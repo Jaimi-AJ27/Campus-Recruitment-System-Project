@@ -21,14 +21,14 @@ $dob=$worksheet->getCellByColumnAndRow(3,$row)->getValue();
 $email= $worksheet->getCellByColumnAndRow(4,$row)->getValue();
 $mobile=$worksheet->getCellByColumnAndRow(5,$row)->getValue();
 $course=$worksheet->getCellByColumnAndRow(6,$row)->getValue();
-$percent=$worksheet->getCellByColumnAndRow(7,$row)->getValue();
-$passout=$worksheet->getCellByColumnAndRow(8,$row)->getValue();
-$plustwo=$worksheet->getCellByColumnAndRow(9,$row)->getValue();
-$pass=$worksheet->getCellByColumnAndRow(10,$row)->getValue();
-$school=$worksheet->getCellByColumnAndRow(11,$row)->getValue();
-$tenth=$worksheet->getCellByColumnAndRow(12,$row)->getValue();
-$passs=$worksheet->getCellByColumnAndRow(13,$row)->getValue();
-$schl=$worksheet->getCellByColumnAndRow(14,$row)->getValue();
+$passout=$worksheet->getCellByColumnAndRow(7,$row)->getValue();
+$percent=$worksheet->getCellByColumnAndRow(8,$row)->getValue();
+$passo=$worksheet->getCellByColumnAndRow(9,$row)->getValue();
+$school=$worksheet->getCellByColumnAndRow(10,$row)->getValue();
+$plustwo=$worksheet->getCellByColumnAndRow(11,$row)->getValue();
+$passs=$worksheet->getCellByColumnAndRow(12,$row)->getValue();
+$schl=$worksheet->getCellByColumnAndRow(13,$row)->getValue();
+$tenth=$worksheet->getCellByColumnAndRow(14,$row)->getValue();
 $college=$worksheet->getCellByColumnAndRow(15,$row)->getValue();
 $project=$worksheet->getCellByColumnAndRow(16,$row)->getValue();
 $address=$worksheet->getCellByColumnAndRow(17,$row)->getValue();
@@ -43,13 +43,13 @@ $sqli = "INSERT INTO tbl_login(username, password,role,Status) VALUES ('$email',
 	mysqli_query($conn,$sql);
 	$user = mysqli_insert_id($conn);
 	 
-	 $sq = "INSERT INTO tbl_address(user_id,address,city,Status) VALUES ('$user','$address','$city','$status')";
+	 $sq = "INSERT INTO tbl_address(user_id,address,city,Status) values ('$user','$address','$city','$status')";
 	 mysqli_query($conn,$sq);
 	  
 	 $s = "INSERT INTO tbl_project(user_id,project) VALUES ('$user','$project')";
 	 mysqli_query($conn,$s);
 	 
-	 $sa = "INSERT INTO tbl_education(user_id,course,percent,passout,plustwo,pass,school,tenth,passs,schl,college) VALUES ('$user','$course','$percent','$passout','$plustwo','$pass','$school','$tenth','$passs','$schl','$college')";
+	 $sa = "INSERT INTO tbl_education(user_id,course,percent,passout,plustwo,pass,school,tenth,passs,schl,college) VALUES ('$user','$course','$percent','$passout','$plustwo','$passo','$school','$tenth','$passs','$schl','$college')";
 	 mysqli_query($conn,$sa);
 }
 }
