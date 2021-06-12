@@ -32,7 +32,7 @@ if(isset($_SESSION['Company']))
 									$sql2 = "UPDATE tbl_login SET password='".$new."' WHERE login_id=".$id;
 									if($conn->query($sql2) === TRUE)
 										{
-										echo '<script type="text/javascript">alert("Password Successfully Changed");window.location=\'logout.php\';</script>';
+										echo '<script type="text/javascript">alert("Password Successfully Changed");window.location=\'index.php\';</script>';
 										}
 									}
 								else

@@ -64,7 +64,7 @@
                 $result = $conn->query($add);
                 if($result->num_rows > 0) {
                   while($row = $result->fetch_assoc()) {
-                   echo $row['address']."  |  City : ".$row['city']." | Pincode : ".$row['pincode']." | Country : ". $row['country']; }}?>
+                   echo $row['address']."  |  City : ".$row['city']; }}?>
 				
 				 </p>
 				
@@ -76,10 +76,10 @@
 		<h2 id="heading">Education</h2>	
 				<table>
 					<tr>
-						<th >Year</th>
+						<th >Percentage</th>
 						<th>Institute</th>
 						<th>Course</th>
-						<th>Percentage</th>
+						<th>Year</th>
 					</tr>
 					<tr>
 					
@@ -127,7 +127,7 @@
                   while($row = $result->fetch_assoc()) {
                ?>
 			   <p>Project Name : <?php echo $row['project'];?></p>
-			   <p>Language Used : <?php echo $row['lang'];?></p>
+			  
 			   <?php
 			   }}
 			   

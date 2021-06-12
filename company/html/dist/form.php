@@ -26,7 +26,7 @@
 	<body>
 		<form method="POST" action="resume.php">
 			  <input type="hidden" name="loginid" value="<?php echo $_POST['loginid'] ?>"> 
-            <center>  <fieldset class="sectionwrap" id="div9">
+            <center>  <fieldset class="sectionwrap" id="div9" width="50%">
                    
                         <tr>
                             <td class="labels" style="color:white";>
@@ -52,7 +52,7 @@
                         </tr>
                         <tr>
                             <td class="labels">
-                                <input type="submit" name="btn" value="Generate Resume" id="btn" />
+                                <button type="submit" name="btn" class="btn btn-success" value="Generate Resume" id="btn" />Generate Resume</button>
                             </td>
                         </tr>
                     </table>
